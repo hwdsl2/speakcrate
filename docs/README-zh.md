@@ -1,10 +1,10 @@
-[English](README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
+[English](../README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
 
 # SpeakCrate
 
 **开源、自托管的文本转语音 API。**
 
-[![构建状态](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-kokoro-server.svg)](https://hub.docker.com/r/hwdsl2/kokoro-server) &nbsp;[![开源协议: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT) &nbsp;[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://selfhostedaistack.com/speakcrate-notebook)
+[![构建状态](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-kokoro-server.svg)](https://hub.docker.com/r/hwdsl2/kokoro-server) &nbsp;[![开源协议: MIT](images/license.svg)](https://opensource.org/licenses/MIT) &nbsp;[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://selfhostedaistack.com/speakcrate-notebook)
 
 SpeakCrate 是一个自托管的文本转语音 API，由 [Kokoro](https://github.com/hexgrad/kokoro) 提供支持。它提供 OpenAI 兼容的语音合成端点、多语言语音和流式音频输出。可使用 Docker 在 CPU 或 NVIDIA GPU 上部署。镜像基于 Debian（python:3.12-slim）。
 
@@ -22,14 +22,14 @@ SpeakCrate 是一个自托管的文本转语音 API，由 [Kokoro](https://githu
 - **离线运行：** 使用预缓存模型无需访问互联网（`KOKORO_LOCAL_ONLY`）
 - **自动构建：** 通过 [GitHub Actions](https://github.com/hwdsl2/speakcrate/actions) 自动构建和发布
 
-也可作为 [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-zh.md) 的一部分使用，一条命令即可部署完整的自托管 AI 技术栈。
+也可作为 [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-zh.md) 的一部分使用，一条命令即可部署完整的自托管 AI 技术栈。
 
 > 📘 [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) 是一本关于构建、保护和运维自己的私有 AI 技术栈的实用指南。
 
 **另提供：**
 
 - 在线试用：[在 Colab 中打开](https://selfhostedaistack.com/speakcrate-notebook)——无需 Docker 或安装
-- 相关 AI 服务：[ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/README-zh.md)、[EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/README-zh.md)、[GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/README-zh.md)、[InferCrate](https://github.com/hwdsl2/infercrate/blob/main/README-zh.md)、[ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/README-zh.md)、[UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/README-zh.md)
+- 相关 AI 服务：[ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-zh.md)、[EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-zh.md)、[GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-zh.md)、[InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-zh.md)、[ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-zh.md)、[UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-zh.md)
 
 ## 快速开始
 
@@ -101,9 +101,9 @@ curl http://您的服务器IP:8880/v1/audio/speech \
 
 - [Setup IPsec VPN](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/README-zh.md)
 - [Docker 上的 IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md)
-- [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh.md)
-- [OpenVPN](https://github.com/hwdsl2/docker-openvpn/blob/main/README-zh.md)
-- [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh.md)
+- [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/docs/README-zh.md)
+- [OpenVPN](https://github.com/hwdsl2/docker-openvpn/blob/main/docs/README-zh.md)
+- [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/docs/README-zh.md)
 
 </details>
 
@@ -150,7 +150,7 @@ docker image tag quay.io/hwdsl2/kokoro-server hwdsl2/kokoro-server
 
 所有变量均为可选。挂载 `/var/lib/kokoro` 数据卷的新安装会自动生成 Bearer 令牌。没有密钥的既有安装会保持开放以兼容旧行为。
 
-此 Docker 镜像使用以下变量，可在 `env` 文件中声明（参见[示例](kokoro.env.example)）：
+此 Docker 镜像使用以下变量，可在 `env` 文件中声明（参见[示例](../kokoro.env.example)）：
 
 | 变量 | 说明 | 默认值 |
 |---|---|---|
@@ -564,7 +564,7 @@ docker rm -f kokoro
 
 SpeakCrate 可作为更广泛的自托管 AI 设置中的文字转语音服务。
 
-如需完整和轻量级 Docker Compose 技术栈、手动 `docker run` 示例，以及结合 SpeakCrate、EmbedCrate、GatewayCrate、InferCrate、ParseCrate 和 UplinkCrate 的语音/RAG/MCP 流水线示例，请参阅 [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-zh.md)。
+如需完整和轻量级 Docker Compose 技术栈、手动 `docker run` 示例，以及结合 SpeakCrate、EmbedCrate、GatewayCrate、InferCrate、ParseCrate 和 UplinkCrate 的语音/RAG/MCP 流水线示例，请参阅 [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-zh.md)。
 
 ## 使用计数
 

@@ -1,10 +1,10 @@
-[English](README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
+[English](../README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
 
 # SpeakCrate
 
 **API синтеза речи с открытым исходным кодом для размещения на собственном сервере.**
 
-[![Статус сборки](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-kokoro-server.svg)](https://hub.docker.com/r/hwdsl2/kokoro-server) &nbsp;[![Лицензия: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT) &nbsp;[![Открыть в Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://selfhostedaistack.com/speakcrate-notebook)
+[![Статус сборки](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/speakcrate/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-kokoro-server.svg)](https://hub.docker.com/r/hwdsl2/kokoro-server) &nbsp;[![Лицензия: MIT](images/license.svg)](https://opensource.org/licenses/MIT) &nbsp;[![Открыть в Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://selfhostedaistack.com/speakcrate-notebook)
 
 SpeakCrate представляет собой API синтеза речи для размещения на собственном сервере на базе [Kokoro](https://github.com/hexgrad/kokoro). Предоставляет совместимый с OpenAI эндпоинт синтеза речи, многоязычные голоса и потоковый вывод аудио. Развёртывается с помощью Docker на CPU или NVIDIA GPU. Образ основан на Debian (python:3.12-slim).
 
@@ -22,14 +22,14 @@ SpeakCrate представляет собой API синтеза речи дл�
 - **Работа без интернета:** работа без интернета с предварительно кешированной моделью (`KOKORO_LOCAL_ONLY`)
 - **Автоматическая сборка:** образы автоматически собираются и публикуются через [GitHub Actions](https://github.com/hwdsl2/speakcrate/actions).
 
-Также доступен в составе [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-ru.md), который развёртывает полный AI-стек на собственном сервере одной командой.
+Также доступен в составе [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-ru.md), который развёртывает полный AI-стек на собственном сервере одной командой.
 
 > 📘 [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon): практическое руководство по созданию, защите и эксплуатации собственного приватного ИИ-стека.
 
 **Также доступно:**
 
 - Попробовать онлайн: [Открыть в Colab](https://selfhostedaistack.com/speakcrate-notebook) — Docker и установка не требуются
-- Связанные AI-сервисы: [ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/README-ru.md), [EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/README-ru.md), [GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/README-ru.md), [InferCrate](https://github.com/hwdsl2/infercrate/blob/main/README-ru.md), [ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/README-ru.md), [UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/README-ru.md)
+- Связанные AI-сервисы: [ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-ru.md), [EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-ru.md), [GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-ru.md), [InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-ru.md), [ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-ru.md), [UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-ru.md)
 
 ## Быстрый старт
 
@@ -101,9 +101,9 @@ curl http://IP_вашего_сервера:8880/v1/audio/speech \
 
 - [Setup IPsec VPN](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/README-ru.md)
 - [IPsec VPN на Docker](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md)
-- [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md)
-- [OpenVPN](https://github.com/hwdsl2/docker-openvpn/blob/main/README-ru.md)
-- [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md)
+- [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/docs/README-ru.md)
+- [OpenVPN](https://github.com/hwdsl2/docker-openvpn/blob/main/docs/README-ru.md)
+- [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/docs/README-ru.md)
 
 </details>
 
@@ -150,7 +150,7 @@ docker image tag quay.io/hwdsl2/kokoro-server hwdsl2/kokoro-server
 
 Все переменные необязательны. Новые установки с подключённым томом `/var/lib/kokoro` автоматически генерируют Bearer-токен. Существующие установки без ключа остаются открытыми для обратной совместимости.
 
-Этот Docker-образ использует следующие переменные, которые можно объявить в файле `env` (см. [пример](kokoro.env.example)):
+Этот Docker-образ использует следующие переменные, которые можно объявить в файле `env` (см. [пример](../kokoro.env.example)):
 
 | Переменная | Описание | По умолчанию |
 |---|---|---|
@@ -564,7 +564,7 @@ docker rm -f kokoro
 
 SpeakCrate можно использовать как службу синтеза речи в более широком self-hosted AI-стеке.
 
-Готовые полные и облегчённые стеки Docker Compose, примеры ручного запуска через `docker run`, а также примеры голосовых, RAG- и MCP-конвейеров с SpeakCrate, EmbedCrate, GatewayCrate, InferCrate, ParseCrate и UplinkCrate см. в [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-ru.md).
+Готовые полные и облегчённые стеки Docker Compose, примеры ручного запуска через `docker run`, а также примеры голосовых, RAG- и MCP-конвейеров с SpeakCrate, EmbedCrate, GatewayCrate, InferCrate, ParseCrate и UplinkCrate см. в [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-ru.md).
 
 ## Счётчики использования
 

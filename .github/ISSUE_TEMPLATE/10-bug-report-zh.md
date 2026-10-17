@@ -8,7 +8,7 @@ assignees: ''
 ---
 **任务列表**
 
-- [ ] 我已阅读[自述文件](https://github.com/hwdsl2/speakcrate/blob/main/README-zh.md)或相关章节
+- [ ] 我已阅读[自述文件](https://github.com/hwdsl2/speakcrate/blob/main/docs/README-zh.md)或相关章节
 - [ ] 我搜索了已有的 [Issues](https://github.com/hwdsl2/speakcrate/issues?q=is%3Aissue)
 - [ ] 这个问题是关于 SpeakCrate Docker 镜像/配置/API，而不只是 Kokoro 本身
 
@@ -21,7 +21,7 @@ assignees: ''
 
 **部署场景**
 - [ ] 独立容器
-- [ ] 属于 [self-hosted-ai-stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-zh.md)
+- [ ] 属于 [self-hosted-ai-stack](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-zh.md)
 
 **重现步骤**
 重现该问题的步骤：
