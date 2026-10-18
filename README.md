@@ -8,7 +8,7 @@
 
 SpeakCrate is a self-hosted text-to-speech API powered by [Kokoro](https://github.com/hexgrad/kokoro). It provides an OpenAI-compatible speech endpoint, multilingual voices, and streamed audio. Deploy with Docker on CPU or an NVIDIA GPU. The image is based on Debian (python:3.12-slim).
 
-> Previously known as `docker-kokoro`, maintained by [hwdsl2](https://github.com/hwdsl2). The Docker image remains `hwdsl2/kokoro-server`.
+> Previously known as `docker-kokoro`, maintained by [hwdsl2](https://github.com/hwdsl2). The Docker image name remains `hwdsl2/kokoro-server`.
 
 **Features:**
 

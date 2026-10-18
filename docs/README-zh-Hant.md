@@ -8,7 +8,7 @@
 
 SpeakCrate 是一個自託管的文字轉語音 API，由 [Kokoro](https://github.com/hexgrad/kokoro) 提供支援。它提供與 OpenAI 相容的語音合成端點、多語言語音和串流音訊輸出。可使用 Docker 在 CPU 或 NVIDIA GPU 上部署。映像基於 Debian（python:3.12-slim）。
 
-> 本專案原名為 `docker-kokoro`，由 [hwdsl2](https://github.com/hwdsl2) 維護。Docker 映像仍為 `hwdsl2/kokoro-server`。
+> 本專案原名為 `docker-kokoro`，由 [hwdsl2](https://github.com/hwdsl2) 維護。Docker 映像名稱仍為 `hwdsl2/kokoro-server`。
 
 **功能特性：**
 
