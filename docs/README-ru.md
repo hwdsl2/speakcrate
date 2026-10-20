@@ -28,7 +28,7 @@ SpeakCrate представляет собой API синтеза речи дл�
 
 **Также доступно:**
 
-- Попробовать онлайн: [Открыть в Colab](https://selfhostedaistack.com/speakcrate-notebook) — Docker и установка не требуются
+- Попробовать онлайн: [Открыть в Colab](https://selfhostedaistack.com/speakcrate-notebook) — Docker и локальная установка не требуются
 - Связанные AI-сервисы: [ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-ru.md), [EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-ru.md), [GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-ru.md), [InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-ru.md), [ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-ru.md), [UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-ru.md)
 
 ## Быстрый старт

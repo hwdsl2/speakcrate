@@ -28,7 +28,7 @@ SpeakCrate 是一個自託管的文字轉語音 API，由 [Kokoro](https://githu
 
 **另提供：**
 
-- 線上試用：[在 Colab 中開啟](https://selfhostedaistack.com/speakcrate-notebook)——無需 Docker 或安裝
+- 線上試用：[在 Colab 中開啟](https://selfhostedaistack.com/speakcrate-notebook)——無需 Docker 或本機安裝
 - 相關 AI 服務：[ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-zh-Hant.md)、[EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-zh-Hant.md)、[GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-zh-Hant.md)、[InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-zh-Hant.md)、[ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-zh-Hant.md)、[UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-zh-Hant.md)
 
 ## 快速開始
