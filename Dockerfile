@@ -16,17 +16,13 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # ffmpeg is used for mp3/aac/opus output format conversion.
 # Note: ffmpeg from Debian repos is licensed under LGPL 2.1+/GPL 2+.
 # See: https://ffmpeg.org/legal.html
+# Linux PyPI wheels include CUDA, so use the CPU index for both architectures.
 RUN set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends build-essential ca-certificates cmake curl espeak-ng ffmpeg libsndfile1 \
     && python3 -m venv /opt/venv \
     && pip install --no-cache-dir --upgrade pip \
-    && ARCH=$(uname -m) \
-    && if [ "$ARCH" = "x86_64" ]; then \
-         pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu; \
-       else \
-         pip install --no-cache-dir torch; \
-       fi \
+    && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir --uploaded-prior-to P7D \
          "kokoro>=0.9" \
          "misaki[ja]" \
@@ -34,12 +30,11 @@ RUN set -x \
          soundfile \
          fastapi \
          "uvicorn[standard]" \
-    && if [ "$ARCH" != "x86_64" ]; then \
-         pip list --format=freeze | grep -iE '^nvidia[_-]|^cuda[_-]|^triton' | cut -d= -f1 | xargs -r pip uninstall -y; \
-       fi \
+    && pip list --format=freeze | grep -iE '^nvidia[_-]|^cuda[_-]|^triton' | cut -d= -f1 | xargs -r pip uninstall -y \
     && apt-get purge -y build-essential cmake \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
+    && python -c 'import torch; assert torch.version.cuda is None, torch.__version__; from kokoro import KPipeline' \
     && find /opt/venv -name '*.pyi' -delete \
     && { find /opt/venv -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true; } \
     && mkdir -p /var/lib/kokoro
