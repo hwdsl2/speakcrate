@@ -26,10 +26,13 @@ SpeakCrate 是一个自托管的文本转语音 API，由 [Kokoro](https://githu
 
 > 📘 [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) 是一本关于构建、保护和运维自己的私有 AI 技术栈的实用指南。
 
-**另提供：**
+**在线试用：** [在 Colab 中打开](https://selfhostedaistack.com/speakcrate-notebook)（无需 Docker 或本地安装）
 
-- 在线试用：[在 Colab 中打开](https://selfhostedaistack.com/speakcrate-notebook)——无需 Docker 或本地安装
-- 相关 AI 服务：[ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-zh.md)、[EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-zh.md)、[GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-zh.md)、[InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-zh.md)、[ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-zh.md)、[UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-zh.md)
+**相关 AI 服务：**
+
+- **语音：** [ScribeCrate](https://github.com/hwdsl2/scribecrate/blob/main/docs/README-zh.md)
+- **文档与检索：** [ParseCrate](https://github.com/hwdsl2/parsecrate/blob/main/docs/README-zh.md)、[EmbedCrate](https://github.com/hwdsl2/embedcrate/blob/main/docs/README-zh.md)
+- **模型与网关：** [InferCrate](https://github.com/hwdsl2/infercrate/blob/main/docs/README-zh.md)、[GatewayCrate](https://github.com/hwdsl2/gatewaycrate/blob/main/docs/README-zh.md)、[UplinkCrate](https://github.com/hwdsl2/uplinkcrate/blob/main/docs/README-zh.md)
 
 ## 快速开始
 
