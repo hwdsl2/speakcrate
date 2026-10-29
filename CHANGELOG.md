@@ -19,6 +19,14 @@ Release: `2026.10.1`
 - Established the first tagged source release. Docker images continue to update
   independently through existing moving tags.
 
+## 2026-10-13
+
+### Fixed
+
+- Fixed Colab demo setup on Python runtimes incompatible with Kokoro by
+  using a Python 3.12 server environment, installing required language
+  dependencies and reporting server startup failures.
+
 ## 2026-10-07
 
 ### Changed
