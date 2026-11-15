@@ -2,6 +2,18 @@
 
 Notable changes to SpeakCrate are documented here.
 
+## 2026-11-15
+
+### Added
+
+- Accept mounted secret files through `KOKORO_API_KEY_FILE` with explicit source-conflict and file validation.
+- Keep file-sourced auth keys out of persistent key files and report the active startup key through management helpers.
+
+### Compatibility
+
+- Configure another source before removing file mode; without a direct/saved key, existing volumes can resume legacy no-auth behavior.
+- Rotation applies at startup. Existing direct/generated credentials and volumes remain supported; older images require an older supported credential source.
+
 ## 2026-10-24
 
 Release: `2026.10.2`
