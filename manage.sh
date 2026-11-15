@@ -112,6 +112,12 @@ load_config() {
     KOKORO_AUTH_ENABLED=$(cat "$AUTH_ENABLED_FILE")
   fi
 
+  # Read the startup snapshot, never the possibly edited external file.
+  if [ -f /run/kokoro-secrets/api_key ]; then
+    KOKORO_AUTH_ENABLED=1
+    KOKORO_API_KEY=$(cat /run/kokoro-secrets/api_key) || exiterr "Cannot read active API key."
+  fi
+
   if [ "$KOKORO_AUTH_ENABLED" != 0 ] && [ -z "$KOKORO_API_KEY" ] && [ -f "$API_KEY_FILE" ]; then
     KOKORO_API_KEY=$(cat "$API_KEY_FILE")
   fi

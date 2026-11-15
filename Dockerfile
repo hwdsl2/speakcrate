@@ -43,7 +43,9 @@ COPY ./run.sh /opt/src/run.sh
 COPY ./manage.sh /opt/src/manage.sh
 COPY ./api_server.py /opt/src/api_server.py
 COPY ./LICENSE.md /opt/src/LICENSE.md
-RUN chmod 755 /opt/src/run.sh /opt/src/manage.sh \
+RUN mkdir -p /run/kokoro-secrets \
+    && chmod 700 /run/kokoro-secrets \
+    && chmod 755 /opt/src/run.sh /opt/src/manage.sh \
     && ln -s /opt/src/manage.sh /usr/local/bin/kokoro_manage
 
 EXPOSE 8880/tcp
