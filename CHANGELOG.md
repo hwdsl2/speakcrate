@@ -4,6 +4,8 @@ Notable changes to SpeakCrate are documented here.
 
 ## 2026-11-15
 
+Release: `2026.11.1`
+
 ### Added
 
 - Accept mounted secret files through `KOKORO_API_KEY_FILE` with explicit source-conflict and file validation.
